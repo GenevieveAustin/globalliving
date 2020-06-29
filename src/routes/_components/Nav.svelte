@@ -17,11 +17,14 @@
     <a class="navbar-item" class:is-active={segment === undefined} href=".">
 			home
 		</a>
-		<a class="navbar-item" class:is-active={segment === 'about'} href="about">
-			about
+		<a class="navbar-item" class:is-active={segment === 'yearSelect'} href="yearSelect">
+			Year Selection
 		</a>
 		<a class="navbar-item" class:is-active={segment === 'blog'} href="blog">
 			blog
+		</a>
+		<a class="navbar-item" class:is-active={segment === 'gen'} href="gen">
+			blgenog
 		</a>
   </div>
 </nav>
