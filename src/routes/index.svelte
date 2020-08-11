@@ -3,13 +3,14 @@
     const { session } = stores()
 
     import { goto } from '@sapper/app';
+    
+    let name = ''
 
     function saveAndGo() {
         session.user = name
-        goto('gen')
+        goto('yearSelect')
     }
 
-    let name = ''
 </script>
 
 <style>

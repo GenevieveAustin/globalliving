@@ -20,11 +20,14 @@
 		<a class="navbar-item" class:is-active={segment === 'yearSelect'} href="yearSelect">
 			Year Selection
 		</a>
-		<a class="navbar-item" class:is-active={segment === 'blog'} href="blog">
-			blog
+		<a class="navbar-item" class:is-active={segment === 'twelveChoices'} href="twelveChoices">
+			Year Twelve Selection
 		</a>
-		<a class="navbar-item" class:is-active={segment === 'gen'} href="gen">
-			blgenog
+		<a class="navbar-item" class:is-active={segment === 'output'} href="output">
+			username test
+		</a>
+		<a class="navbar-item" class:is-active={segment === 'thirteenChoices'} href="thirteenChoices">
+			Year Thirteen Selection
 		</a>
   </div>
 </nav>

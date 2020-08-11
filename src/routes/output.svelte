@@ -8,4 +8,6 @@
 
 </style>
 
-<h1>{session.user}</h1>
+<h1> Name: {session.user}</h1>
+<h1> Year Level: {session.year}</h1>
+<h1> Class Selection: {session.class}</h1>
