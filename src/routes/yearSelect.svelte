@@ -2,15 +2,17 @@
   import { stores } from "@sapper/app";
   const { session } = stores();
 
+  //Sets up modals for button toggle
   let thirteenModalOn = false;
   let twelveModalOn = false;
+  //Toggles modals on button click
   function toggleThirteenModal() {
-    console.log("lol");
     thirteenModalOn = !thirteenModalOn;
   }
   function toggleTwelveModal() {
     twelveModalOn = !twelveModalOn;
   }
+  //Sets year selection for output
   function clickTwelve() {
     session.year = "Year Twelve";
   }

@@ -2,6 +2,7 @@
   import { stores } from "@sapper/app";
   const { session } = stores();
 
+  //Sets up modals for toggles
   let perfTechModalOn = false;
   let specialModalOn = false;
   let enterpriseModalOn = false;
@@ -9,6 +10,7 @@
   let recModalOn = false;
   let svaModalOn = false;
   let sustainabilityModalOn = false;
+  //Toggles modals on button click
   function togglePerfTechModal() {
     perfTechModalOn = !perfTechModalOn;
   }
@@ -30,6 +32,7 @@
   function toggleSustainabilityModal(){
     sustainabilityModalOn = !sustainabilityModalOn;
   }
+  //Sets class selection for output
   function selectEnterprise(){
     session.class = "Enterprise"
   }

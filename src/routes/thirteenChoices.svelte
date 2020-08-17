@@ -2,6 +2,9 @@
   import { stores } from "@sapper/app";
   const { session } = stores();
   
+  /* Sets up modals for buttons
+  All toggle 'true' when button is pressed
+  */
   let perfTechModalOn = false;
   let specialModalOn = false;
   let enterpriseModalOn = false;
@@ -11,6 +14,7 @@
   let btgModalOn = false;
   let leadershipModalOn = false;
   let tikangaModalOn = false;
+  //Individual functions for each modal toggle
   function togglePerfTechModal() {
     perfTechModalOn = !perfTechModalOn;
   }
@@ -38,6 +42,7 @@
   function toggleTikangaModal(){
     tikangaModalOn = !tikangaModalOn;
   }
+  // Sets the class selection of the student for output
   function selectBtg(){
     session.class = "Beyond the Gates"
   }
