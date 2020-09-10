@@ -328,7 +328,7 @@
     <section class="modal-card-body">
       <b>You have selected Tikanga.</b>
       <br />
-      Together wwe will approach our local marae, to learn and practice living
+      Together we will approach our local marae, to learn and practice living
       tikanga. We organise weekly visits to support whanau.
     </section>
     <footer class="modal-card-foot">
