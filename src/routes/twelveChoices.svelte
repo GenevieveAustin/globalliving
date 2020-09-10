@@ -17,62 +17,79 @@
   function toggleSpecialModal() {
     specialModalOn = !specialModalOn;
   }
-  function toggleEnterpriseModal(){
+  function toggleEnterpriseModal() {
     enterpriseModalOn = !enterpriseModalOn;
   }
-  function toggleICEModal(){
+  function toggleICEModal() {
     ICEModalOn = !ICEModalOn;
   }
-  function toggleRecModal(){
+  function toggleRecModal() {
     recModalOn = !recModalOn;
   }
-  function toggleSvaModal(){
+  function toggleSvaModal() {
     svaModalOn = !svaModalOn;
   }
-  function toggleSustainabilityModal(){
+  function toggleSustainabilityModal() {
     sustainabilityModalOn = !sustainabilityModalOn;
   }
   //Sets class selection for output
-  function selectEnterprise(){
-    session.class = "Enterprise"
+  function selectEnterprise() {
+    session.details.class = "Enterprise";
   }
-  function selectIce(){
-    session.class = "ICE Productions"
+  function selectIce() {
+    session.details.class = "ICE Productions";
   }
-  function selectPerfTech(){
-    session.class = "Performance Technology"
+  function selectPerfTech() {
+    session.details.class = "Performance Technology";
   }
-  function selectRec(){
-    session.class = "Recreation"
+  function selectRec() {
+    session.details.class = "Recreation";
   }
-  function selectSpecial(){
-    session.class = "Special Project"
+  function selectSpecial() {
+    session.details.class = "Special Project";
   }
-  function selectSustainability(){
-    session.class = "Sustainability"
+  function selectSustainability() {
+    session.details.class = "Sustainability";
   }
-  function selectSva(){
-    session.class = "SVA"
+  function selectSva() {
+    session.details.class = "SVA";
   }
 </script>
 
 <style>
-
-.button{
+  .button {
     display: block;
-    margin: 10px;
-}
-
+    margin: 10px auto;
+    width: 20em;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
 </style>
 
-<h1 class="title">Year Twelve Selection</h1>
-<button class="button" on:click={toggleEnterpriseModal}>Enterprise</button>
-<button class="button" on:click={toggleICEModal}>ICE Productions</button>
-<button class="button" on:click={togglePerfTechModal}>Performance Technology</button>
-<button class="button" on:click={toggleRecModal}>Recreation</button>
-<button class="button" on:click={toggleSpecialModal}>Special Project</button>
-<button class="button" on:click={toggleSustainabilityModal}>Sustainability</button>
-<button class="button" on:click={toggleSvaModal}>SVA</button>
+<a href="yearSelect">
+  <img src="/back.png" alt="Back" />
+</a>
+
+<h1 class="title has-text-centered">Year Twelve Selection</h1>
+<button class="button is-primary" on:click={toggleEnterpriseModal}>
+  Enterprise
+</button>
+<button class="button is-primary" on:click={toggleICEModal}>
+  ICE Productions
+</button>
+<button class="button is-primary" on:click={togglePerfTechModal}>
+  Performance Technology
+</button>
+<button class="button is-primary" on:click={toggleRecModal}>Recreation</button>
+<button class="button is-primary" on:click={toggleSpecialModal}>
+  Special Project
+</button>
+<button class="button is-primary" on:click={toggleSustainabilityModal}>
+  Sustainability
+</button>
+<button class="button is-primary" on:click={toggleSvaModal}>SVA</button>
 
 <div class="modal" class:is-active={enterpriseModalOn}>
   <div class="modal-background" />
@@ -84,11 +101,16 @@
         aria-label="close"
         on:click={toggleEnterpriseModal} />
     </header>
-    <section class="modal-card-body"><b>You have selected Enterprise.</b>
-    <br> This course allows you to take part in a Young Enterprise team for 1-3 terms.
+    <section class="modal-card-body">
+      <b>You have selected Enterprise.</b>
+      <br />
+      This course allows you to take part in a Young Enterprise team for 1-3
+      terms.
     </section>
     <footer class="modal-card-foot">
-      <a class="button is-success" href="output" on:click={selectEnterprise}>Continue</a>
+      <a class="button is-primary" href="output" on:click={selectEnterprise}>
+        Continue
+      </a>
       <button class="button" on:click={toggleEnterpriseModal}>Cancel</button>
     </footer>
   </div>
@@ -99,16 +121,18 @@
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Success</p>
-      <button
-        class="delete"
-        aria-label="close"
-        on:click={toggleICEModal} />
+      <button class="delete" aria-label="close" on:click={toggleICEModal} />
     </header>
-    <section class="modal-card-body"><b>You have selected ICE Productions.</b>
-    <br> An opportunity to share your voice with an audience. Examples include working on Shelter, Rangi News, film competitions, journalism etc.
+    <section class="modal-card-body">
+      <b>You have selected ICE Productions.</b>
+      <br />
+      An opportunity to share your voice with an audience. Examples include
+      working on Shelter, Rangi News, film competitions, journalism etc.
     </section>
     <footer class="modal-card-foot">
-      <a class="button is-success" href="output" on:click={selectIce}>Continue</a>
+      <a class="button is-primary" href="output" on:click={selectIce}>
+        Continue
+      </a>
       <button class="button" on:click={toggleICEModal}>Cancel</button>
     </footer>
   </div>
@@ -124,11 +148,16 @@
         aria-label="close"
         on:click={togglePerfTechModal} />
     </header>
-    <section class="modal-card-body"><b>You have selected Performance Technology.</b>
-    <br> This course will provide opportunities to work with lighting, sound, moving images or SFX make up.
+    <section class="modal-card-body">
+      <b>You have selected Performance Technology.</b>
+      <br />
+      This course will provide opportunities to work with lighting, sound,
+      moving images or SFX make up.
     </section>
     <footer class="modal-card-foot">
-      <a class="button is-success" href="output" on:click={selectPerfTech}>Continue</a>
+      <a class="button is-primary" href="output" on:click={selectPerfTech}>
+        Continue
+      </a>
       <button class="button" on:click={togglePerfTechModal}>Cancel</button>
     </footer>
   </div>
@@ -139,16 +168,19 @@
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Success</p>
-      <button
-        class="delete"
-        aria-label="close"
-        on:click={toggleRecModal} />
+      <button class="delete" aria-label="close" on:click={toggleRecModal} />
     </header>
-    <section class="modal-card-body"><b>You have selected Recreation.</b>
-    <br> An optional course for students to partake in physical activities of their choice. The focus is giving you the opportunity to enhance aspects of your wellbeing.
+    <section class="modal-card-body">
+      <b>You have selected Recreation.</b>
+      <br />
+      An optional course for students to partake in physical activities of their
+      choice. The focus is giving you the opportunity to enhance aspects of your
+      wellbeing.
     </section>
     <footer class="modal-card-foot">
-      <a class="button is-success" href="output" on:click={selectRec}>Continue</a>
+      <a class="button is-primary" href="output" on:click={selectRec}>
+        Continue
+      </a>
       <button class="button" on:click={toggleRecModal}>Cancel</button>
     </footer>
   </div>
@@ -159,16 +191,18 @@
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Success</p>
-      <button
-        class="delete"
-        aria-label="close"
-        on:click={toggleSpecialModal} />
+      <button class="delete" aria-label="close" on:click={toggleSpecialModal} />
     </header>
-    <section class="modal-card-body"><b>You have selected Special Project.</b>
-    <br>This is a course for students who wish to undertake a academic or personal project.
+    <section class="modal-card-body">
+      <b>You have selected Special Project.</b>
+      <br />
+      This is a course for students who wish to undertake a academic or personal
+      project.
     </section>
     <footer class="modal-card-foot">
-      <a class="button is-success" href="output" on:click={selectSpecial}>Continue</a>
+      <a class="button is-primary" href="output" on:click={selectSpecial}>
+        Continue
+      </a>
       <button class="button" on:click={toggleSpecialModal}>Cancel</button>
     </footer>
   </div>
@@ -179,16 +213,18 @@
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Success</p>
-      <button
-        class="delete"
-        aria-label="close"
-        on:click={toggleSvaModal} />
+      <button class="delete" aria-label="close" on:click={toggleSvaModal} />
     </header>
-    <section class="modal-card-body"><b>You have selected SVA.</b>
-    <br>SVA in Year 12 allows students the time and space to collaboratively plan and implement service initiatives for our local and wider community.
+    <section class="modal-card-body">
+      <b>You have selected SVA.</b>
+      <br />
+      SVA in Year 12 allows students the time and space to collaboratively plan
+      and implement service initiatives for our local and wider community.
     </section>
     <footer class="modal-card-foot">
-      <a class="button is-success" href="output" on:click={selectSva}>Continue</a>
+      <a class="button is-primary" href="output" on:click={selectSva}>
+        Continue
+      </a>
       <button class="button" on:click={toggleSvaModal}>Cancel</button>
     </footer>
   </div>
@@ -204,12 +240,22 @@
         aria-label="close"
         on:click={toggleSustainabilityModal} />
     </header>
-    <section class="modal-card-body"><b>You have selected Sustainability.</b>
-    <br>This course allows students to work on a sustainable project or initiative for our local or wider community.
+    <section class="modal-card-body">
+      <b>You have selected Sustainability.</b>
+      <br />
+      This course allows students to work on a sustainable project or initiative
+      for our local or wider community.
     </section>
     <footer class="modal-card-foot">
-      <a class="button is-success" href="output" on:click={selectSustainability}>Continue</a>
-      <button class="button" on:click={toggleSustainabilityModal}>Cancel</button>
+      <a
+        class="button is-primary"
+        href="output"
+        on:click={selectSustainability}>
+        Continue
+      </a>
+      <button class="button" on:click={toggleSustainabilityModal}>
+        Cancel
+      </button>
     </footer>
   </div>
 </div>
