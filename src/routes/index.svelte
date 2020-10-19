@@ -6,9 +6,11 @@
 
   let email = "";
 
-  function getDataFromLocal() {
-    let data = localStorage.getItem(email)
-    if (data == undefined) {
+  async function getDataFromLocal() {
+    // let data = localStorage.getItem(email)
+    let personDoc = await db.collection('People').doc(email).get()
+    session.details = personDoc.data()
+    if (session.details == undefined) {
       console.log("UNDEF")
       session.details = {
         email: email,
@@ -17,8 +19,7 @@
       };
       goto("yearSelect")
     } else {
-      console.log("ELSE")
-      session.details = JSON.parse(data)
+      console.log("ELSE") 
       goto("output")
     }
   }
