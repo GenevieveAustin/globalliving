@@ -78,6 +78,7 @@
     margin-left: auto;
     text-align: centre;
   }
+  
   .button {
     display: block;
     margin: 10px auto;
